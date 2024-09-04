@@ -1,0 +1,14 @@
+version: '3'
+services:
+    phpfpm:
+        build: ./phpfpm
+        volumes:
+            - ./xdebug-result:/tmp/xdebug
+            - ./src:/var/www/html
+    webgrind:
+        platform: linux/x86_64
+        build: ./webgrind
+        ports:
+            - "8080:80"
+        volumes:
+            - ./xdebug-result:/tmp
