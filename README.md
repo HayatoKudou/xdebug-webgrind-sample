@@ -8,7 +8,7 @@ xdebugとwebgrindを使ってPHPのプロファイリングを行うサンプル
 
 # プロファイル用のテストコード実行
 - `docker exec -it phpfpm bash` を実行し、php-fpmコンテナに入る
-- コンテナ内で `php index.php` を実行し、プロファイル用のテストコードの実行
+- コンテナ内で `php artisan app:sample` を実行し、サンプルコマンドの実行
 - xdebug-resultディレクトリにプロファイル結果が出力される
 
 # プロファイル結果の確認
